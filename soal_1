@@ -1,0 +1,26 @@
+#include <iostream>
+#include<conio.h>
+#include<windows.h>
+
+//rumus luas segitiga
+
+using namespace std;
+
+ main()
+{
+	
+	
+	
+	 char latihan[] = "1. Buat program untuk mencari luas segitiga jika diketahui alas = 10 dan tinggi = 20";
+	 char razan[] = "jawabannya maka didapat hasil =";
+	 int alas = 10;
+	 int tinggi = 20;
+	 int luas = alas * tinggi / 2;
+	 
+	 system("color A");
+	 cout << latihan << razan << luas << endl;
+	 getch();
+ 
+     return 0;
+	 
+}
