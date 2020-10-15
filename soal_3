@@ -1,0 +1,42 @@
+#include <iostream>
+#include <conio.h>
+#include <unistd.h> //Library
+
+ 
+using namespace std;
+
+int main(){
+	
+	float ke_1, ke_2, ke_3;
+	 
+	
+	system("color A"); /* ini biar bisa mewarnai text nya */
+	cout << "3. Buat program menghitung total nilai dan rata-ratanya"<<endl; /* ini soal dari ibu tea */
+	cout << "   Jika terdapat Nilai yang diinput."<<"(*Nilai dapat berupa bilangan desimal)"<<endl; /*keterangan soal lanjutan */
+		cout << "masukan angka pertama ==>"<<""; /* ini input yang pertama */
+				cin >> ke_1; 						/* ini meminta input */
+		cout << "Masukan angka kedua ==>"<<"";	/* ini input yang kedua */
+				cin >> ke_2;							/* ini meminta input */
+		cout << "masukan angka ketiga ==>"<<"";	/* ini input yang ketiga */
+				cin >> ke_3;						/* ini meminta input */
+			sleep (3);
+		
+		for (int j=1;j<=100;j++){ /* ini namanya perulangan for, perulangan akan diulang */
+	system ("cls");				/* selagi hasilnya kurang dari sama dengan 100 */
+	cout<<"\n\t\t\trobot razan sedang menghitung nilai rata-rata.."<<j<<"%"<<endl;
+	cout<<"\t";
+	
+	for (int i=1;i<=j;i++){ /* ini juga perulangan untuk mendeklarasikan jika i itu adalah angka 1 dan jika */
+							/* i memang true kurang dari j samadengan j maka, akan eksekusi i++ */
+		if (i%2==0){		
+			cout<<"|";}
+			
+			}cout<<endl;		
+			usleep (10);
+		}	
+				
+	float Aku = ke_1 + ke_2 + ke_3 / 3;
+		system("color D");
+		cout << "didapat hasilnya segitu gan (^_^) ==>" << Aku; /* memanggil variable yang telah diinputkan */
+	
+}
