@@ -1,0 +1,124 @@
+#include <iostream>//library
+#include <conio.h>
+#include <stdio.h>
+#include <math.h>
+#include <unistd.h>
+
+using namespace std;
+
+int main(){
+	//ini adalah operator assignment
+	int a,b,c,d,e,f;
+	a= 20;b = 9;f=6;c=(b + a);d=(c - f);e=11;f=21;//ini adalah operator assignment
+	cout<<a<<"\n"<<b<<"\n"<<c<<"\n"<<d<<"\n"<<e<<"\n"<<f<<"\n"<<endl;
+	
+	//ini adalah operator aritmatika
+	/* +, - , / dan * */
+	cout<<a<<" + "<<b<<endl;
+	cout<<"hasil dari penjumlahan diatas adalah : "<<(a+b)<<endl;
+	cout<<a<<" x "<<b<<endl;
+	cout<<"hasil dari perkalian diatas adalah : "<<(a*b)<<endl;
+	cout<<a<<" : "<<b<<endl;
+	cout<<"hasil dari pembagian diatas adalah : "<<(a/b)<<endl;
+	cout<<a<<" - "<<b<<endl;
+	cout<<"hasil dari pengurangan diatas adalah : "<<(a-b)<<endl;
+	
+	/* Compound assignment */
+	// Terdiri dari 
+	/* +=, /=, *=, -=, >>=, <<=, &= dan ^= */
+	// int a=20;
+	// a+=8; sama saja dengan a = 20 + *8;
+	// sehingga outputnya 28
+	int g;
+	g = a;
+	g+=5; // maka outputnya 25
+	cout<<g<<endl;
+	a = g;
+	a-=8;//maka outputnya 17
+	cout<<a<<endl;
+	b=a;
+	b/=1;//maka outputnya 17
+	cout<<b<<endl;	
+	c=20;
+	c*=5;//maka outputnya 100
+	cout<<c<<endl;
+	
+	//operator increment dan decrement
+	// menambahkan nilai secara otomatis
+	// sesuai nilai yang ditetapkan
+	
+	a = c++;//bermaksud menambahkan 1 nilai atau bisa dituliskan a = c + 1
+	b = a--;//bermaksud mengurangi 1 nilai atau bisa dituliskan a = c - 1
+	d = ++c;// bermaksud menambahka 2 kali lipat dari post increment atau bisa dituliskan d = c + 1 + 1 
+	e = --a;// sama saja dengan post
+	cout<<"ini adalah contoh post increment ==> "<<a<<"\n";
+	cout<<"ini adala contoh post decrement ==> "<<b<<"\n";
+	cout<<"ini adalah contoh pre increment ==> "<<d<<"\n";
+	cout<<"ini adalah contoh pre decrement ==> "<<e<<"\n";
+	
+	/* operator logika  */
+	// && , || , dan ! 
+	cout<<((5+5)&&(5*2))<<endl;//akan menghasilkan angka 1 yang berarti true (benar)
+	cout<<((5-5)&& (5-3))<<endl;// akan menghasilkan angka 0 yang berarti false (Salah)
+	cout<<((0)||(0))<<endl;//akan menghasilkan angka 0 yang berarti false (salah)
+	cout<<((3+2)||(3+1))<<endl;//akan menghasilkan angka 1 yang berarti true (benar)
+	cout<<((8+5)!=(8+5))<<endl;//akan menghasilkan angka 0 yang berarti false (salah)
+	cout<<((8+5)== (8+5))<<endl;//akan menghasilkan angka 1 yang berarti true (benar)
+	
+	/* menggunakan nested if, while dan for */
+	
+	string nama, pwd, mau;
+	int  i;
+	pwd = "Razan";
+	
+	//membuat sistem login dengan looping while
+	// dan if nested
+	cout<<" silahkan login terebih dahulu\n"
+		<<" Masukan namamu				: ";
+		cin>>nama;
+	cout<<" Silahkan Masukan Password password = (Razan)   :";
+		cin>>pwd;
+	//manggunakan while
+	while(pwd !="Razan"){
+		cout<<"password anda salah\n"
+			<<"masukan ulang :";cin>>pwd;
+		i++;
+	}
+		// menggunakan nested if
+		 string n;
+		 login_password ://menggunakan statement goto (ini nama labelnya ya _^
+		if(pwd =="Razan"){
+			cout<<"yes Password anda benar"<<endl;
+			cout<<"mau main permainan? ya atau tidak";
+			cin>>n;
+			if( n =="ya"){
+				int z;
+				string nama;
+			
+				cout <<"okay disini kita main perulangan ya\n"<<endl;
+				cout <<"Masukan Perulangan yang kamu mau  :\n";
+				cin>>z;
+				cout <<"Masukan kata yang ingin diulang   :\n";
+				cin>>nama;
+				//menggunakan perulangan for
+				for(i=1;i<=z;i++){
+					
+					cout<<" ulangin namanya si "<<nama<<"\n";
+				}
+			}
+			else{
+			cout<<"yah udah keluar"<<endl;
+			}
+		}
+		else{
+			cout<<"error password anda salah\n"
+				<<"kembali ke menu awal"<<endl;
+		  goto login_password; //memanggil label
+		}
+	}
+		
+		
+		
+	
+	
+	
